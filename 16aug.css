@@ -1,0 +1,41 @@
+html{
+    width: 50%;
+}
+p{
+    color: red;
+    font-size: 32px;
+/* element selector */
+}
+body{
+    background-color: aqua;
+}
+
+*{
+    /* universal selector */
+    margin: 0;
+    padding: 0;
+}
+article p{
+ /* Due to Specifity high high display */
+ /* Inheritance Selector */
+}
+h1,h2{
+    /* group selector */
+    border: 2px solid black;
+    width: 50;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#blue{
+    /* id */
+   
+
+}
+.grey{
+/* class */
+background-color: blueviolet;
+color: black;
+}
+li{
+    color: rgb(237, 113, 25);
+}
+/* Unit for length em & rem  mostly */
