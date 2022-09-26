@@ -1,0 +1,153 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<title>First Question</title>
+<style>
+body{
+margin: 0px;
+padding: 0;
+}
+.main {
+background-color: aliceblue;
+border: 2px solid red;
+padding: 100px 150px 50px 50px;
+margin: 50px 100px 150px 200px;
+}
+.inline-detail {
+display: flex;
+align-items: center
+}
+h3 p{
+font-size: 18px;
+}
+</style>
+</head>
+<body>
+<div class="main">
+<div class="heading">
+<h1>Students Details</h1>
+</div><div class="details">
+    <div class="inline-detail">
+    <h3>Name : </h3>
+    <p>Patel Jaykumar</p>
+    </div>
+    <div class="inline-detail">
+    <h3>Registration Number : </h3>
+    <p>12002642</p>
+    </div>
+    <div class="inline-detail">
+    <h3>Mobile Number : </h3>
+    <p>8000098630</p>
+    </div>
+    <div class="inline-detail">
+    <h3>Degree Type : </h3>
+    <p>4 year B.Tech Program</p>
+    </div>
+    <div class="inline-detail">
+    <h3>Program Name : </h3>
+    <p>Computer Science & Engineering</p>
+    </div>
+    <div class="inline-detail">
+    <h3>Address : </h3>
+    <p>Ahmedabad, Gujarat, India</p>
+    </div>
+    </div>
+    </div>
+    </body>
+    </html> -->
+=================================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2nd Question</title>
+    <style>
+        .main {
+            background-color: aliceblue;
+            border: 3px solid brown;
+            border-radius: 10px;
+            padding: 100px 150px 50px 50px;
+            margin: 50px 100px 150px 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #btnSubmit {
+            padding: 5px 15px;
+            margin: 10px 0px;
+        }
+
+        label {
+            font-size: 20px;
+            margin: 25px 0;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form>
+            <label>Name: Anuj Jha</label><br>
+            <label id="RegiNo"> 12001656 </label><br><br>
+            <input type="text" id="txtbox"><br>
+            <!-- <input id="btnSubmit" type="button">Submit</input><br> -->
+            <button id="btnSubmit" type="button">Submit</button><br>
+        </form>
+        <p id="disp"></p>
+    </div>
+    <script>
+        let disp = document.getElementById("disp")
+        let txtbox = document.getElementById("txtbox")
+        let btnSubmit = document.getElementById("btnSubmit")
+        btnSubmit.onclick = function () {
+            txtbox.value = document.getElementById("RegiNo").innerText
+        }
+    </script>
+</body>
+
+</html>
+================================
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3</title>
+    <style>
+        #divEle {
+            width: 300px;
+            border: 2px solid black;
+            padding: 30px;
+        }
+
+        #pEle {
+            width: 100px;
+            border: 1px solid green;
+            padding: 10px;
+        }
+
+        #frm {
+            width: 500px;
+            border: 5px solid black;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <label type="text" id="name"> Anuj Jha</label>
+    <label type="text" id="RegiNo"> 12001656 </label>
+    <label type="text" id="CourseName"> CSE</label>
+    <form id="frm" onclick="alert(`Course Name : ` +
+document.getElementById('CourseName').innerText)">
+        <div id="divEle" onclick="alert(`Registration No. : ` +
+document.getElementById('RegiNo').innerText)">
+            <p id="pEle" onclick="alert(`Name : ` +
+document.getElementById('name').innerText)">
+                This is p element
+            </p>
+        </div>
+    </form>
+    <script>

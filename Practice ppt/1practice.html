@@ -1,0 +1,201 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head> </head>
+
+<body>
+    <h1>js boolean</h1>
+    <div id="demo">
+        <script>
+            var x = 5;
+            var y = 5;
+            var z = 6;
+            document.getElementById("demo").innerHTML = (x == y) + "<br>" +(x==z);
+    
+            var Names=['Anuj', 'Ritik'];
+            document.getElementById("demo").innerHTML = Names[0];
+    
+            var person={
+                fName:'Anuj',
+                lName:'Jha',
+                age:20,
+                skinTone: "Fair"
+            };
+            document.getElementById("demo").innerHTML =
+            person.fName + " " + person.lName +" is " + person.age +" years old. ";
+            person=null;
+            document.getElementById("demo").innerHTML =typeof person; 
+
+            var p1=2;
+            var p2=5;
+    
+            function myFunction(p1,p2){
+                return p1*p2;
+            }
+            document.getElementById("demo").innerHTML =
+            myFunction(2,5); */
+
+            document.getElementById("demo") = "The Temperature is :" + toCelsius(77) + "Celcius .";
+            function toCelsius(fahrenheit) {
+                return (5 / 9) * (fahrenheit - 32);
+            } 
+
+            
+
+
+        </script>
+    </div>
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <h1>My First Web Page</h1>
+    <p>My first paragraph.</p>
+    
+    <script>
+        document.write("hello");
+        document.write(5 + 6);
+
+        window.alert(5+6);
+        console.log(10-0);
+        
+    </script>
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script>
+function abc() 
+{
+    document.getElementById("ab").innerHTML = "LPU expects some better placements out of you";
+}
+</script>
+</head>
+<body>
+<p id="ab">Hello Class</p>
+<input type="submit" onclick="abc()">
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+
+<script src="practice.js"></script>
+</head>
+<body>
+<p id="ab">Hello Class</p>
+<input type="submit" onclick="abc()">
+</body>
+</html> -->
+
+<!--<!DOCTYPE html>
+<html>
+<head>
+<script>
+function abc() 
+{
+            window.alert("Welcome to LPU");
+            document.write("HTML Alert Dialog Box Example");
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="abc()">
+</body>
+</html>-->
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function abc() {
+            var retVal = confirm("Do you want to continue ?");
+            if (retVal == true) {
+                document.write("User wants to continue!");
+                return true;
+            }
+            else {
+                document.write("User does not want to continue!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="submit" onclick="abc()">
+</body>
+
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script>
+function abc() 
+{
+    var retVal = prompt("Enter your name : ", "your name here");
+    document.write("You have entered : " + retVal);
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="abc()">
+</body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<p id="abc"></p>
+<script>
+var a = 5;
+var b = 6;
+var c = a+ b;
+document.getElementById("abc").innerHTML = "The total is: " + c;
+</script>
+</body>
+</html>
+ -->
+ <!-- <!DOCTYPE html>
+<html>
+<body>
+<p>If you re-declare a JavaScript variable, it will not lose its value.</p>
+<p id="abc"></p>
+<script>
+var Name = "Design ";
+var  Name;
+document.getElementById("abc").innerHTML = Name;
+</script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<p id="abc"></p>
+<script>
+name1 = "Welcome to  ";
+name1 += "Lovely Professional University";
+document.getElementById("abc").innerHTML = name1;
+</script>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<body>
+<button onclick= "document.getElementById('demo').innerHTML=Date()"> The time is</button>
+
+<p id="demo"></p>
+
+</body>
+</html>
+ -->
+

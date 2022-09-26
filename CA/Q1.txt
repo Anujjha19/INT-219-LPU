@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Q1</title>
+    <style>
+        #frm {
+            width: 500px;
+            padding: 10px;
+            /* margin: 20px; */
+            border: 2px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="frm">
+        <label> Full Name :  
+        <input type="text" id="inpname">
+        </label><br>
+        <label> Username : 
+        <input type="text" id="inpusername">
+    </label><br>
+        <label> Password :
+        <input type="password" id="inppass">
+        </label><br>
+        <label> Re Password : 
+        <input type="password" id="cnfpass"></label>
+        <br>
+        <label> Address : 
+        <input type="text" id="address"></label>
+        <br>
+        <label> Age : 
+        <input type="number" id="age"></label>
+        <br>
+        <label> Gender : 
+        <select name="gender" id="gender"></label>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        </select> <br>
+        <button id="btnSave">Save</button>
+
+    </form>
+    <script>
+        let btnSave = document.getElementById("btnSave")
+        let gender = document.getElementById("gender")
+        let inpusername = document.getElementById("inpusername")
+            // let inpname = document.getElementById("inpname")
+        let inppass = document.getElementById("inppass")
+        let cnfpass = document.getElementById("cnfpass")
+        let age = document.getElementById("age")
+
+        btnSave.onclick = function() {
+            if (inppass.value == cnfpass.value) {
+                window.alert(Username :  + inpusername.value +  Age :  + age.value +  Password :  + inppass.value +  Gender :  + gender.value)
+            } else {
+                alert("Please check Password.")
+            }
+        }
+    </script>
+</body>
+
+</html>

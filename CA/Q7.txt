@@ -1,0 +1,21 @@
+<html>
+    <body>
+    $ <input type="text" id="text1" oninput="myFunction()">
+    Rs.<input type="text" id="text2">
+    
+    <script>
+        function myFunction(){
+            let b= document.getElementById("text1").value
+            let c=b*68
+            document.getElementById("text2").value=c
+        }
+    </script>
+    </body>
+</html>
+
+
+1. function name was wrong in oninput function.
+2. Opening Curly bracket was missing in function defination
+3. variable b and c was not declared.
+4. Assignment operator was mistakenly used as == instead of =.
+5. Closing of script tag was missing

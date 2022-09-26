@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <label id="fname"  for="firstname">First Name :</label>
+        <input type="text" name="" id="fn">
+    </form>
+    <br>
+    <label id="lname"  for="lastname">Last Name :</label>
+    <input type="text" name="" id="ln"> </form>
+    <br>
+    <label  id="gen" for="gender">Gender :</label>
+    <input type="radio" id="male" name="male" value="">
+    <label for="male"> Male </label>
+    <input type="radio" id="male" name="female" value="">
+    <label for="female"> Female</label><br>
+    <br>
+    <label  id="hobies" for="hobbies">Hobbies :</label>
+    <input type="checkbox" id="cricket" name="cricket" value="">
+    <label for="cricket"> Cricket </label>
+    <input type="checkbox" id="football" name="football" value="">
+    <label for="football"> Football</label><br>
+    <br>
+    <!-- <button type="button"> button</button> -->
+    <input id="btnSubmit" type="button" onclick="display_alert()" value="button">
+
+
+
+
+    <script>
+        let btnSubmit = document.getElementById("btnSubmit")
+        
+        let firstrname = document.getElementById("firstname")
+        let lastname = document.getElementById("lastname")
+            // let inpname = document.getElementById("inpname")
+        var gen= document.getElementById("gender")
+        let hobbies = document.getElementById("hobies")
+        
+
+        btnSubmit.onclick = function display_alert() {
+            {
+                window.alert("First Name :"  + firstname.value + "Last Name :" + lastname.value +  "Hobbies :"   + hobbies.value +  "Gender : " + gender.value)
+            }
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

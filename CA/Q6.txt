@@ -1,0 +1,14 @@
+var games= ["Football", "Tennis", "Cricket"]
+
+for (let index = 0; index < games.length; index++) {
+    const element = games[index];
+    console.log(element)
+}
+
+
+
+Possible all errors: 
+1. [] missing in first line while declaring games array
+2. in for loop statement games.length() is wrong it should be games.length
+3. in for loop cost array[index] is wrong it should be games[index]
+4. console(element) should be console.log(element)

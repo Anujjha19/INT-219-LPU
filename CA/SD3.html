@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Question 3</title>
+    <style>
+        #divEle {
+            width: 300px;
+            border: 2px solid black;
+            padding: 30px;
+        }
+
+        #pEle {
+            width: 100px;
+            border: 1px solid green;
+            padding: 10px;
+        }
+
+        #frm {
+            width: 500px;
+            border: 5px solid black;
+            padding: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <label type="text" id="name"> Anuj Jha</label>
+    <label type="text" id="RegiNo"> 12001656 </label>
+    <label type="text" id="CourseName"> CSE</label>
+    <form id="frm" onclick="alert(`Course Name : ` +
+document.getElementById('CourseName').innerText)">
+        <div id="divEle" onclick="alert(`Registration No. : ` +
+document.getElementById('RegiNo').innerText)">
+            <p id="pEle" onclick="alert(`Name : ` +
+document.getElementById('name').innerText)">
+                This is p element
+            </p>
+        </div>
+    </form>
+    <script>

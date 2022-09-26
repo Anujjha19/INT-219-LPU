@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <form>
+        <select name="color" id="color" onchange="changeBgColor()">
+            <option value="yellow">Yellow</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="pink">Pink</option>
+        </select>
+    </form>
+    <script>
+        let color = document.getElementById("color")
+        function changeBgColor(){
+            document.body.bgColor = color.value;
+        }
+    </script>
+</body>
+</html>

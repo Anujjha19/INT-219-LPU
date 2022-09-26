@@ -1,0 +1,26 @@
+#view1{
+    display: flex;
+    background-color: gray;
+    height: 100px;
+    width: 500px;
+    margin: 0px;
+    padding-top: 150px;
+}
+#view2{
+    display: flex;
+    background-color: rgb(197, 71, 71);
+    height: 100px;
+    width: 500px;
+    margin: 0px;
+    padding-top: 150px;
+
+}
+#view3{
+    display: flex;
+    background-color: rgb(20, 127, 220);
+    height: 100px;
+    width: 500px;
+    margin: 0px;
+    padding-top: 150px;
+
+}

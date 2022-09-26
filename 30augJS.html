@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+/* let myNum=10;
+console.log(Number.isInteger(myNum));
+console.log(Math.trunc(Math,PI));
+console.log(Math.round(Math,PI));
+console.log(Math.ceil(Math,PI));
+console.log(Math.floor(Math,PI));
+console.log("K20WN" .charAt(Math.floor(Math.random()*5+1)));
+console.log(Math.floor(Math.random(Math,PI)));
+
+ */
+
+/* 
+//First Interactive class
+let PlayGame=confirm("Shall we play rock , paper and scissors?")
+if(PlayGame){
+    //play
+    let playerChoice=prompt("Please enter rock , paper and scissors.")
+    if(playerChoice){
+        let playerOne=playerChoice.trim().toLowerCase();
+        if(
+            playerOne==="rock" || 
+            playerOne==="paper" || 
+            playerOne==="scissors"
+        ){
+            let computerChoice = Math.floor(Math.random()*3+1);
+            let computer =
+            computerChoice ===1 ? "rock"
+            : computerChoice ===1 ? "paper"
+            : "scissors";
+            let result=
+            playerOne ===computer? "Tie a game !"
+            : playerOne ==="rock" &&computer==="paper"
+            ? 'Computer Wins !'
+            : playerOne ==="paper" &&computer==="scissors"
+            ? 'Computer Wins !'
+            : playerOne ==="scissors" &&computer==="rock"
+            ? 'Computer Wins !'
+            :'PlayerOne Wins !';
+            alert(result);
+        }
+        else{
+            alert("You did not enter rock, paper or scissors.");
+        }
+    }
+        else{
+            alert("I guess you changed your mind. Maybe next Time. ");
+        }
+
+        }
+    else{
+        alert("OK , maybe next time.")
+    }
+ */
+    /* 
+    var is function scope
+    let is blocklevel scope
+    */
+/* 
+var x=1;
+let y=2;
+const z=3;
+
+function myfun(){
+    var x=10;
+    const z=5;
+    if{
+        var x=1;
+        const z=6;
+    }
+
+
+} */
+
+const myArray=[];
+myArray[0]="k20wn";
+myArray[1]=93;
+myArray[2]=true;
+document.write(myArray);
+document.write("<br>");
+
+document.write(myArray.length);
+document.write("<br>");
+
+document.write(myArray[myArray.length-1]);
+document.write("<br>");
+
+document.write(myArray[2]);
+document.write("<br>");
+
+myArray.push(95);
+document.write("<br>");
+document.write(myArray);
+document.write("<br>");
+
+myArray.unshift("CSE305");
+document.write("<br>");
+document.write(myArray);
+document.write("<br>");
+
+myArray.pop("CSE305");
+document.write("<br>");
+document.write(myArray);
+document.write("<br>");
+
+myArray.shift("CSE305");
+document.write("<br>");
+document.write(myArray);
+document.write("<br>");
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const myObj={name : "Anuj"};
+        document.write(myObj.name);
+        document.write("<br>");
+        const myObj1={
+            name:"Anuj Jha",
+            present:true,
+            hobbies:[" Eat ", " Sleep ", " Code "],
+            beverage:{morning:"Tea" , night:"Milk"},
+            grade:function(){
+                return "A";
+            }
+        }
+        document.write(myObj1.name);
+        document.write("<br>");
+        document.write(myObj1.present);
+        document.write("<br>");
+        document.write(myObj1.hobbies);
+        document.write("<br>");
+        document.write(myObj1.beverage.morning);
+        document.write("<br>");
+        document.write(myObj1.grade());
+        document.write("<br>");
+        
+
+        //Another Object with inheritance
+        const vehicle ={
+            wheels:4,
+            engine:function(){
+                return "Diesel Engine";
+            }
+        };
+        const truck=Object.create(vehicle); //other object
+        truck.doors=2;
+        document.write(truck.wheels);
+        document.write("<br>");
+        document.write(truck.engine());
+        document.write("<br>");
+        document.write(truck.doors);
+        document.write("<br>");
+
+        /* const car=Object.create(vehicle);
+        car.doors=2;
+        car.function()
+        {
+                return "Petrol Engine";
+            }
+            document.write("<br>");
+        document.write(car.function());
+        document.write("<br>"); */
+
+        
+    </script>
+    
+</body>
+</html>

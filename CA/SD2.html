@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>2nd Question</title>
+    <style>
+        .main {
+            background-color: aliceblue;
+            border: 3px solid brown;
+            border-radius: 10px;
+            padding: 100px 150px 50px 50px;
+            margin: 50px 100px 150px 200px;
+            display: flex;
+            justify-content: center;
+        }
+
+        #btnSubmit {
+            padding: 5px 15px;
+            margin: 10px 0px;
+        }
+
+        label {
+            font-size: 20px;
+            margin: 25px 0;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form>
+            <label>Name: Anuj Jha</label><br>
+            <label id="RegiNo"> 12001656 </label><br><br>
+            <input type="text" id="txtbox"><br>
+            <!-- <input id="btnSubmit" type="button">Submit</input><br> -->
+            <button id="btnSubmit" type="button">Submit</button><br>
+        </form>
+        <p id="disp"></p>
+    </div>
+    <script>
+        let disp = document.getElementById("disp")
+        let txtbox = document.getElementById("txtbox")
+        let btnSubmit = document.getElementById("btnSubmit")
+        btnSubmit.onclick = function () {
+            txtbox.value = document.getElementById("RegiNo").innerText
+        }
+    </script>
+</body>
+
+</html>
