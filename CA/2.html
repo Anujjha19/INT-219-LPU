@@ -14,16 +14,14 @@
 
 <script>
 /* Write your code here*/
-
-function change(i) {  
+var i=0
+function change() {  
     var doc = document.getElementById("div1");  
     var color =[ "red", "blue", "brown", "green","gray"];  
-    for(i=0; i<color.length; i++){  
-        doc.style.backgroundColor = color[i];  
-
-    }
-}  setInterval(function changebackgroundcolor(){change(0)},5); 
-
+    doc.style.backgroundColor= color[i];
+    i=(i+1) % color.length;
+}
+setInterval(change , 2000);
 
 </script>
 
