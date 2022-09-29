@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="29SeptJquery.js"></script>
+</head>
+<body>
+
+
+
+
+
+<h1>jQuery form events - focus(), change(), blur(), select(), submit() example</h1>
+
+<form name="testing" action="#">
+<div>
+   TextBox : <input type="textbox" size="50"></input>
+</div>
+<div>
+   <label style="float:left">TextArea : </label> 
+   <textarea cols="30" rows="5"></textarea>
+</div>
+
+<div>
+   CheckBox : <input type="checkbox" name="checkme">Check Me</input>
+</div>
+	
+<div>
+   Country : <select id="country">
+		  <option value="China">China</option>
+	 	  <option value="United State">United State</option>
+		 </select>
+</div>
+	
+<div>
+	<input type="submit"></input> <input type="reset"></input>
+</div>
+		
+</form>
+
+
+</body>
+</html>
+
+
+
+//JQuery Events
+
+$("#p1").mouseup(function(){
+    alert("Mouse up Over p1 !");
+});
+
+$("#p1").hover(function(){
+    alert("You entered p1 !");
+},
+function(){
+    alert("Bye! You now leave p1 !");
+});
+$("input").focus(function(){
+    $(this).css("background-color" ,#);
+});
+$(input).blur(function(){
+    $(this).css("background-color" , #ffffff);
+})
