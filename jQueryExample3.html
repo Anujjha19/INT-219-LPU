@@ -1,0 +1,32 @@
+<!-- Example : Selects all elements with title attribute and sets 5px solid red border  -->
+
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('[title]').css('border', '5px solid red');
+        });
+    </script>
+</head>
+<body>
+    <div title="div1Title">
+        DIV 1
+    </div>
+    <br />
+    <div title="div2Title">
+        DIV 2
+    </div>
+    <p title="pTitle">
+        This is a paragraph
+    </p>
+    <span title="span1Title">
+        SPAN 1
+    </span>
+    <br /><br />
+    <span>
+        SPAN 2
+    </span>
+</body>
+</html>
+
