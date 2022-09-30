@@ -1,0 +1,49 @@
+<!-- Selects all div elements with both title and style attributes, and sets 5px solid black border -->
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('div[title][style]').css('border', '5px solid black');
+        });
+    </script>
+</head>
+<body>
+    <div title="divTitle" style="background-color:red">
+        Red DIV
+    </div>
+    <br />
+    <div title="divTitle" style="background-color:green">
+        Green DIV
+    </div>
+    <br />
+    
+    <div title="divTitle">
+        Normal Div
+    </div>
+    <br />
+    <div>
+        Normal Div without any attributes
+    </div>
+</body>
+</html>
+
+<!-- 
+Example: Selects all div elements with either title or style attributes, and sets 5px solid black border
+
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('div[title],[style]').css('border', '5px solid black');
+        });
+    </script> -->
+
+<!-- 
+Example: Selects all div elements with title attribute value - divTitle, and style attribute value - background-color:red, and sets 5px solid black border.
+
+    <script type="text/javascript">
+            $(document).ready(function () {
+            $('div[title="divTitle"][style="background-color:red"]')
+            .css('border', '5px solid black');
+            });
+        </script>
+    -->

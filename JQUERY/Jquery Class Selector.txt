@@ -1,0 +1,40 @@
+jQuery Class Selector :-
+
+jQuery Class Selector is used for selecting elements using their class name .
+
+Syntax :         $('.class') 
+
+jQuery Class Selectors uses JavaScript's native getElementsByClassName() function if the browser supports it. 
+
+$('.small')                 // Selects all elements with class small.
+$('.small,.big')         // Selects all elements with class small or big.
+$('div.small,.big')    // Selects div elements with class small and any element with class big.
+
+
+Example:   Selects all elements with class "small" and sets 5px solid red border.
+
+<html>
+<head>
+    <title></title>
+    <script src="jquery-3.1.1.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+            $('.small').css('border', '5px solid red');
+        });
+    </script>
+</head>
+<body>
+    <span class="small">
+        Span 1
+    </span>
+    <br /><br />
+    <div class="small">
+        Div 1
+    </div>
+    <br />
+    <span class="big">
+        Span 2
+    </span>
+    <p class="big">Lovely Professional University</p>
+</body>
+</html>

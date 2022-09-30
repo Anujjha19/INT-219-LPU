@@ -1,0 +1,44 @@
+<!-- Selects all elements with class small and sets 5px solid red border. Notice div1 has 2 classes - small and big.  -->
+
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+            $(document).ready(function () {
+                $('.small').css('border', '5px solid red');
+            });
+    </script>
+</head>
+<body>
+    <div class="small big">
+        DIV 1
+    </div>
+    <br />
+    <div class="small">
+        DIV 2
+    </div>
+</body>
+</html>
+
+<!-- 
+    Example: Selects all elements that has both the classes - small and big. There should be no space between the class names. 
+
+<script type="text/javascript">
+            $(document).ready(function () {
+                $('.small.big').css('border', '5px solid red');
+            });
+    </script> 
+-->
+<!-- 
+If you have a space between the two class names then we are trying to find descendants, i.e. find elements with class big that are descendants of an element with class small.
+<html>
+<head>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.small .big').css('border', '5px solid red');
+                });
+    </script>
+</head> -->
