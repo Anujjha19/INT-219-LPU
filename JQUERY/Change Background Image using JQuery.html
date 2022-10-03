@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<style>  
+#d1 {  
+border: 3px solid red;  
+background-image: url("../bike.jpg");  
+height: 300px;  
+width: 350px;  
+}  
+  
+</style>  
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>  
+  
+<script>  
+$(document).ready(function() {  
+$("button").click(function() {  
+$("#d1").css({"background-image": "url(../car.jpg)"});  
+});  
+});  
+</script>  
+</head>  
+  
+<body>  
+<center>  
+<h4> This is an example of changing the background-image using jQuery. </h4>  
+<div id = "d1"> </div>  
+<p> Click the following button to change the background image of above div </p>  
+<button>  
+Click me  
+</button>  
+</center>  
+</body>  
+  
+</html>
