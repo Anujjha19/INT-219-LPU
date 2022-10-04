@@ -1,0 +1,28 @@
+ ** jQuery slideDown() Method
+
+$(selector).slideDown(speed,callback);
+
+Example
+$("#flip").click(function(){
+  $("#panel").slideDown();
+});
+
+
+**  jQuery slideUp() Method
+
+$(selector).slideUp(speed,callback);
+
+Example
+$("#flip").click(function(){
+  $("#panel").slideUp();
+});
+
+**  jQuery slideToggle() Method
+
+$(selector).slideToggle(speed,callback);
+
+Example
+$("#flip").click(function(){
+  $("#panel").slideToggle();
+});
+
