@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+
+<body>
+<h2>JSON PARSE AND STRINGIFY</h2>
+<script src="jquery.js" type="text/javascript"></script>
+<script>
+
+let json = '{"name": "XYZ", "hobbies": ["Cricket", "Studying", "Badminton"]}';
+let parsedjson = JSON.parse(json);
+document.write("My name is " + parsedjson['name'] + " and ");
+document.write("My hobbies are " + parsedjson['hobbies'].map(e => e).join(', '));
+
+let obj = {
+name: "ABC",
+section: "K20WN",
+roll: "0A",
+hobbies: [
+"Cricket",
+"Studying",
+"Badminton"
+]
+}
+document.write("<br> Converting object to json : " + JSON.stringify(obj));
+</script>
+</body>
+
+</html>
