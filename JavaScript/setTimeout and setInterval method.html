@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1">Click "Try it".Wait 3 seconds , and the page will alert 'Hello'. </p>
+    <button onclick="setTimeout(myFunction, 3000);"> Try It Timeout </button> <!--  Executes a function, after waiting a specified number of milliseconds -->
+    <button onclick="setInterval(myFunction, 3000);"> Try It Interval </button>  <!-- repeats the execution of the function continuously  at specified intervals (in milliseconds).  -->
+
+    <script>
+        function myFunction(){
+            alert("Hello !");
+            //document.getElementById("p1").innerHTML = "New text!";        
+            //document.getElementById("p1").innerText = "New text!";        
+        }
+    </script>
+</body>
+</html>

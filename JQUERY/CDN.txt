@@ -1,0 +1,7 @@
+Microsoft jQuery CDN
+
+http://www.asp.net/ajax/cdn#jQuery_Releases_on_the_CDN_0
+
+Google jQuery CDN
+
+https://developers.google.com/speed/libraries/devguide#jquery

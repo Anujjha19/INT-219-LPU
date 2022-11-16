@@ -1,27 +1,30 @@
 <!--  Eaach Function  -->
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-    $("button").click(function(){
-        $("li").each(function(){
-            alert($(this).text())
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("li").each(function () {
+                    alert($(this).text())
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 </head>
+
 <body>
 
-<button>Alert the value of each list item</button>
+    <button>Alert the value of each list item</button>
 
-<ul>
-  <li>Coffee</li>
-  <li>Milk</li>
-  <li>Soda</li>
-</ul>
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Soda</li>
+    </ul>
 
 </body>
+
 </html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p > DOM manipulation 55/58</p>
+    <ul id="element">
+        <li class="list-item"> First </li>
+        <li class="list-item"> Second </li>
+        <li class="list-item"> Third </li>
+    </ul>
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Six</td>
+            <td>Four</td>
+        </tr>
+    </table>
+
+    <script>
+        //Root Node
+        console.log(document.documentElement);
+        console.log(document.body); // html node
+        console.log(document.head); // html node
+        
+        // Childrens
+        console.log(document.body.childNodes); // gives all comment node , text node , space node 
+        console.log(document.body.children); //Gives only Element Node
+
+        //First and Last Child of Body
+        console.log(document.body.firstChild); // script
+        console.log(document.body.firstElementChild); //Gives only Element Node  i.e p
+        console.log(document.body.lastChild);
+
+        //console.log(childNodes);
+
+        //convert the need object into an array
+        const childrensOfBody =Array.from(document.body.children);
+        console.log(childrensOfBody);
+/* 
+        //get siblings
+        const ulTag=document.body.children[0];
+        //console.log(ulTag.nextSibling); 
+        console.log(ulTag.nextElementSibling);
+
+        const firstLi= document.ulTag.children[0];
+        const secondLi= document.ulTag.children[1];
+        console.log(secondLi.previousElementSibling.textContent);
+
+ */
+
+//Table DOM manipulation
+const tableTag=document.body.children[2]
+console.log(tableTag)
+console.log(tableTag.tBodies)
+console.log(tableTag.rows)
+console.log(tableTag.tBodies[0].rows)
+console.log(tableTag.tBodies[0].rows[0].cells)
+console.log(tableTag.tBodies[0].rows[0].cells[0].textContent)
+console.log(tableTag.tBodies[0].rows[0].cells[1].style= "background-color:blue");
+
+//ID search
+//element.style.background= "red";
+
+const ulTag2 = document.getElementById("element");
+ulTag2.style.backgroundColor= "yellow";
+
+//class selector
+listItem= document.getElementsByClassName("list-item");
+console.log(listItem)
+
+
+console.log(document.getElementsByTagName("table"))
+
+
+    </script>
+
+</body>
+</html>

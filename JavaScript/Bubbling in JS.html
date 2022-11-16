@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .abc
+        {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="abc" onclick="alert('Div click handler')">
+        DIV element 
+        <span class="abc" onclick="alert('Span click handler')">
+        Span element
+            <input type="button" value="Click me" onclick="alert('Button click handler')" />
+        </span>
+    </div>
+</body>
+</html>
+
+<!-- 
+!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .abc
+        {
+            display: table-cell;
+            border: 1px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="abc"
+      onclick="alert('Click event handled by DIV element')">DIV element 
+        <span class="abc">Span element
+            <input type="button" value="Click me"/>
+        </span>
+    </div>
+</body>
+</html>
+ -->
+<!-- 
+ <!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        .divStyle
+        {
+            display: table-cell;
+            border: 5px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="DIV1" class="divStyle">
+        DIV 1
+        <div id="DIV2" class="divStyle">
+            DIV 2
+            <div id="DIV3" class="divStyle">
+                DIV 3
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var divElements = document.getElementsByTagName('div');
+
+        for (var i = 0; i < divElements.length; i++) 
+        {
+            divElements[i].onclick = function () 
+            {
+                this.style.borderColor = "red";
+                alert(this.getAttribute("id") + " backgound changed");
+            }
+        }
+    </script>
+</body>
+</html>
+ -->

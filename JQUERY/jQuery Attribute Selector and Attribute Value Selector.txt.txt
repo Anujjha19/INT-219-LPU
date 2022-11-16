@@ -1,0 +1,14 @@
+jQuery Attribute Selector and Attribute Value Selector
+
+jQuery Attribute Selector is used for selecting  elements
+1. That have specified attribute
+2. That have specified attribute values 
+
+Syntax : 
+$('[attribute]')$('[attribute="value"]')
+
+
+$('[title]') // Selects all elements that have title attribute
+$('div[title]') // Selects all div elements that have title attribute
+$('[title="divTitle"]') // Selects all elements that have title attribute value - divTitle
+$('div[title="divTitle"]') // Selects all div elements that have title attribute value - divTitle

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <p > DOM manipulation 55/58</p>
+    <ul id="element" data="valid">
+        <li class="list-item"> First </li>
+        <li class="list-item"> Second </li>
+        <li class="list-item"> Third </li>
+    </ul>
+    <div id="firstDiv" class="allDivs"> First Div</div>
+    <div class="allDivs">Second Div</div>
+
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Six</td>
+            <td>Four</td>
+        </tr>
+    </table>
+
+    <script>
+        //Creating , Removing and updating Node element
+
+        const newDiv=document.createElement('div');
+        const newText=document.createTextNode('Namaste World');
+    newDiv.appendChild(newText)
+        // body.append(newDiv) //add below
+
+        //body.prepend(newDiv); // added above 
+        body.before(newDiv); // added before noded
+        body.after(newDiv); // added after noded
+
+        //ReplaceWith will replace the existing node with new node
+        firstDiv.replaceWith(newDiv)
+
+        //Remove
+        firstDiv.remove(newDiv)
+
+    </script>
+    
+</body>
+</html>

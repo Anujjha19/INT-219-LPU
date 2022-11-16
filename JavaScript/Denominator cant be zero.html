@@ -1,0 +1,12 @@
+function CheckDenominator() {
+    var SN = document.forms[1].txtSN.value;
+    if (SN == 0) {
+    
+        alert("Denominator cant be zero");
+        return false;
+    }
+    else
+        return true;
+}
+
+<input type="submit" name="btnDel" value="/" onclick="return CheckDenominator()"/>

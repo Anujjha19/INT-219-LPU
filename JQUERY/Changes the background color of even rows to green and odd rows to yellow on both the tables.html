@@ -1,16 +1,18 @@
 <!-- Changes the background color of even rows to green and odd rows to yellow on both the tables.
  -->
- <html>
+<html>
+
 <head>
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-       <script type="text/javascript">
-           $(document).ready(function () {
-               $('tr:even').css('backgroundColor', 'green');
-               $('tr:odd').css('backgroundColor', 'yellow');
-           });
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('tr:even').css('backgroundColor', 'green');
+            $('tr:odd').css('backgroundColor', 'yellow');
+        });
     </script>
 </head>
+
 <body>
     <table id="table1" border="1">
         <tr>
@@ -68,6 +70,7 @@
         </tr>
     </table>
 </body>
+
 </html>
 
 <!-- Example: To change the background color of even rows to green and odd rows to yellow just for one of the table, use #id selector along with element selector.

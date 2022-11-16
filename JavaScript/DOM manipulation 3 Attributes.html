@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <p > DOM manipulation 55/58</p>
+    <ul id="element" data="valid">
+        <li class="list-item"> First </li>
+        <li class="list-item"> Second </li>
+        <li class="list-item"> Third </li>
+    </ul>
+    <div class="allDivs"> First Div</div>
+    <div class="allDivs">Second Div</div>
+
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Six</td>
+            <td>Four</td>
+        </tr>
+    </table>
+
+    <script>
+        //console.log(element.id)
+        console.log(element.data) // undefined  as user defined so there is a other way to get it
+
+        console.log(element.getAttribute('data'));
+        console.log(element.setAttribute('order-placed' , 'pending'));
+        console.log(element.getAttribute('order-placed'));
+
+        console.log(element.hasAttribute('order-placed'));
+        console.log(element.removeAttribute('order-placed'));
+        console.log(element.hasAttribute('order-placed'));
+
+        console.log(element.attributes);
+
+    </script>
+    
+</body>
+</html>

@@ -1,15 +1,17 @@
 <!-- Selects all elements with class small and sets 5px solid red border. Notice div1 has 2 classes - small and big.  -->
 
 <html>
+
 <head>
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script type="text/javascript">
-            $(document).ready(function () {
-                $('.small').css('border', '5px solid red');
-            });
+        $(document).ready(function () {
+            $('.small').css('border', '5px solid red');
+        });
     </script>
 </head>
+
 <body>
     <div class="small big">
         DIV 1
@@ -19,7 +21,10 @@
         DIV 2
     </div>
 </body>
+
 </html>
+
+
 
 <!-- 
     Example: Selects all elements that has both the classes - small and big. There should be no space between the class names. 
@@ -30,6 +35,9 @@
             });
     </script> 
 -->
+
+
+
 <!-- 
 If you have a space between the two class names then we are trying to find descendants, i.e. find elements with class big that are descendants of an element with class small.
 <html>
@@ -42,3 +50,12 @@ If you have a space between the two class names then we are trying to find desce
                 });
     </script>
 </head> -->
+
+
+<!-- Another way to select all elements that has both the classes - small and big is by using filter method. But this approach is slower because it will first create a list of objects with class "small" and then removes elements that does not have class "big“
+<script type="text/javascript">
+                $(document).ready(function () {
+                    $('.small').filter('.big').css('border', '5px solid red');
+                });
+    </script>
+    -->

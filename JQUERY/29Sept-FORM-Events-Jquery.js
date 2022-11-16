@@ -13,8 +13,8 @@ function(){
     alert("Bye! You now leave p1 !");
 });
 $("input").focus(function(){
-    $(this).css("background-color" ,#);
+    $(this).css("background-color" , "red");
 });
 $(input).blur(function(){
-    $(this).css("background-color" , #ffffff);
+    $(this).css("background-color" , "white");
 })

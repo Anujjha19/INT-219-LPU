@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> JavaScript Events </p>
+    <button id="clickBtn" onclick="alert('Namaste World')"> Click ME</button>
+
+    <script>
+        /* //EventS 
+        function callMe(){
+            alert('Thank You')
+        }
+        clickBtn.onclick= callMe; // This will show alert after clicking the button
+        clickBtn.onclick=  callMe(); // This will show alert without clicking the button
+ */
+        //Event Listener
+        /* function callMe(){
+            console.log(this);
+            alert('Thanks')
+        }  */
+        function callMe(event){
+            console.log(event.type);
+            console.log(event.currentTarget);
+            console.log(event.clientX); // X and Y are cusror related to window
+            console.log(event.clientY);
+            alert('Thanks')
+        } 
+        //clickBtn.onclick=  callMe;
+        clickBtn.addEventListener('click' , callMe)
+
+        /* 
+        clickBtn.addEventListener('click' , function(){
+            alert('Hi')
+        })
+        \ */
+        //clickBtn.removeEventListener('click' , callMe)
+        
+         //
+
+    </script>
+</body>
+</html>

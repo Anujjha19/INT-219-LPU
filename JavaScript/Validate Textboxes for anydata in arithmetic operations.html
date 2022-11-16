@@ -1,0 +1,19 @@
+function ValidateMathFunction()
+     {
+            var FN = document.forms[1].txtFN.value;
+            var SN = document.forms[1].txtSN.value;
+            if (FN == "" || SN == "") {
+                alert("Please ensure that data is inserted in both textboxes");
+                return false;
+            }
+            else
+                return true;
+        }
+<form action="/" method="post" onsubmit="return ValidateMathFunction()">
+Enter First Number <input type="text" name="txtFN" value="" /> <br />
+Enter Second Number <input type="text" name="txtSN" value="" /><br />
+ <input type="submit" name="btnAdd" value="+" />
+<input type="submit" name="btnSub" value="-" />
+<input type="submit" name="btnMul" value="*" />
+<input type="submit" name="btnDel" value="/" />
+</form>

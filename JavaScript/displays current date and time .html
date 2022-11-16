@@ -1,0 +1,37 @@
+
+<!-- we are using setInterval() method and calling getCurrentDateTime() function every 5000 milli-seconds. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    setInterval(getCurrentDateTime, 5000);
+
+    function getCurrentDateTime() 
+    {
+        document.getElementById("timeDiv").innerHTML = new Date();
+    }
+</script>
+</head>
+<body>
+<div id="timeDiv" ></div>
+<input type=“button” onclick="setInterval">
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    function getCurrentDateTime() 
+    {
+        document.getElementById("timeDiv").innerHTML = new Date();
+    }
+</script>
+</head>
+<body>
+<div id="timeDiv" ></div>
+<input type="submit" onclick="getCurrentDateTime()">
+</body>
+</html> -->

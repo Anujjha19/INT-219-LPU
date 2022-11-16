@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+
+
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Ubuntu', sans-serif;
+            background: linear-gradient(130deg, #e0c3fc, #8ec5fc);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-attachment: fixed;
+
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .main {
+            background-color: white;
+            box-shadow: 0px 0px 5px gray;
+            border-radius: 5px;
+            width: 550px;
+            padding: 10px;
+            transition: 0.5s;
+        }
+
+        form {
+            margin: 30px 40px;
+            padding-right: 13px;
+        }
+
+        .formgroup>label {
+            display: block;
+        }
+
+        input {
+            margin-bottom: 5px;
+        }
+
+        input::placeholder {
+            color: #5c5c5c;
+        }
+
+        .formgroup>#country {
+            height: 45px;
+            width: 470px;
+            font-size: 15px;
+            border-radius: 5px;
+            border: 2px solid #e0c3fc;
+            outline: #e0c3fc;
+        }
+
+        .formgroup> :where(#name, #number,  #email, #password) {
+            height: 35px;
+            width: 100%;
+            font-size: 15px;
+            padding: 3px 5px;
+            border-radius: 5px;
+            border: 2px solid #e0c3fc;
+            outline: #e0c3fc;
+        }
+
+        input[type="radio"] {
+            border-style: none !important;
+            margin-left: 20px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"],
+        input[type="submit"] {
+            cursor: pointer;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            height: 15px;
+            width: 15px;
+            transform: translateY(20%);
+            border: none;
+            accent-color: #e0c3fc;
+        }
+
+        input[type="submit"] {
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 600;
+            transition: .5s;
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(130deg, #e0c3fc, #0c5095);
+            font-family: 'Ubuntu', sans-serif;
+            padding: 10px 20px;
+        }
+
+        input[type="submit"]:hover {
+            box-shadow: 3px 3px 5px lightgray;
+            background: linear-gradient(130deg, #e0c3fc, #8ec5fc);
+        }
+
+        :where(.formgroup, .formgroup-radio, .formgroup-check)>div,
+        .error_gender {
+            font-size: small;
+            color: red;
+            display: none;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+            <form action="" method="get" name="register" onsubmit="return validation()">
+                <h3>Register here</h3>
+                <div class="formgroup">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="name" placeholder="Enter your name">
+                    <div id="error_name">Please enter your name</div>
+                </div>
+                <div class="formgroup">
+                    <label for="number">Contact No.</label>
+                    <input type="tel" name="number" id="number" class="number"  minlength="0"
+                    maxlength="10" placeholder="Enter your number" >
+                    <div id="error_number">Please enter your contact number</div>
+                </div>
+                <div class="formgroup">
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="email" class="email" placeholder="Enter your email">
+                    <div id="error_email">Please enter your email</div>
+                </div>
+                <div class="formgroup">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" class="password"
+                        placeholder="Enter your password">
+                    <div id="error_password">Please enter your password</div>
+                </div>
+                <div class="formgroup">
+                    <label for="password">Country</label>
+                    <select id="country" name="country" class="country">
+                        <option value="">Select country</option>
+                        <option value="pak">India</option>
+                        <option value="kw">Canada</option>
+                        <option value="ru">Australia</option>
+                    </select>
+                    <div id="error_country">Please select one country</div>
+                </div>
+                <div class="formgroup-radio">
+                    <span>Gender:</span>
+                    <input type="radio" id="gender_male" name="gender" class="radiobtn" value="male">
+                    <label for="gender_male">Male</label>
+                    <input type="radio" id="gender_female" name="gender" class="radiobtn" value="female">
+                    <label for="gender_female">Female</label>
+                    <div id="error_gender">Please select gender</div>
+                </div>
+                <div class="formgroup-check">
+                    <input type="checkbox" id="checkbox" name="check" class="checkbox" value="terms">
+                    <label for="checkbox">I agreed to the terms & conditions</label>
+                    <div id="error_check">Terms are missing</div>
+                </div>
+                <div class="formgroup">
+                    <input type="submit" id="button" value="Register" class="button">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+let error_name=document.getElementById("error_name");
+let error_number=document.getElementById("error_number");
+let error_email=document.getElementById("error_email");
+let error_password=document.getElementById("error_password");
+let error_country=document.getElementById("error_country");
+let error_gender=document.getElementById("error_gender");
+let error_check=document.getElementById("error_check");
+
+function validation(){
+    var form_name= document.forms.register;
+    var name= form_name.name.value;
+    var number= form_name.number.value;
+    var email= form_name.email.value;
+    var password= form_name.password.value;
+    var country= form_name.country.value;
+    var gender= form_name.gender.gender;
+    var check= form_name.name.check;
+
+    if(name==""){
+        error_name.style.display="block";
+        form_name.name.focus();
+        return false;
+    }
+    if(name !=""){
+        error_name.style.display="none";
+    }
+    
+    if(number==""){
+        error_number.style.display="block";
+        form_name.number.focus();
+        return false;
+    }
+    if(number !=""){
+        error_number.style.display="none";
+    }
+    
+    if(email==""){
+        error_email.style.display="block";
+        form_name.email.focus();
+        return false;
+    }
+    if(email !=""){
+        error_email.style.display="none";
+    }
+    
+    if(password==""){
+        error_password.style.display="block";
+        form_name.password.focus();
+        return false;
+    }
+    if(password !=""){
+        error_password.style.display="none";
+    }
+    
+    if(country==""){
+        error_country.style.display="block";
+        form_name.country.focus();
+        return false;
+    }
+    if(country !=""){
+        error_country.style.display="none";
+    }
+    
+    if(!(gender[0].checked == true || gender[1].checked == true )){
+        error_gender.style.display="block";
+        return false;
+    }
+    if((gender[0].checked == true || gender[1].checked == true )){
+        error_gender.style.display="none";
+    }
+    
+    if(check.checked == false){
+        error_check.style.display="block";
+        return false;
+    }
+    if(check.checked == true){
+        error_check.style.display="none";
+    }
+
+    if(form_name){
+        alert(" You have Successfully registered !");
+    }
+
+}
+
+    </script>
+</body>
+
+</html>

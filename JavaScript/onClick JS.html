@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function abc() {
+            var retVal = confirm("Do you want to continue ?");
+            if (retVal == true) {
+                document.write("User wants to continue!");
+                return true;
+            } else {
+                document.write("User does not want to continue!");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="submit" onclick="abc()" />
+</body>
+
+<!-- 
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function abc() 
+{
+             window.alert("Welcome to LPU");
+             document.write("HTML Alert Dialog Box Example");
+}
+</script>
+</head>
+<body>
+<input type="submit" onclick="abc()">
+</body>
+</html> -->

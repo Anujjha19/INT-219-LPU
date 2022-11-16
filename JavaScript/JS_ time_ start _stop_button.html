@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    var intervalId;
+
+    function startClock() 
+    {
+        intervalId = setInterval(getCurrentDateTime, 1000);
+    }
+
+    function stopClock() 
+    {
+        clearInterval(intervalId);
+    }
+    function getCurrentDateTime() 
+    {
+        document.getElementById("timeDiv").innerHTML= new Date();
+    }
+</script>
+</head>
+<body>
+<div id="timeDiv" ></div> <br />
+<input type="button" value="Start Clock" onclick="startClock()" />
+<input type="button" value="Stop Clock" onclick="stopClock()" />
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+
+        function validateform() {
+            
+            var name = document.myForm.name.value.trim();
+            var password = document.myForm.password.value;
+            var repassword = document.myForm.repassword.value;
+
+            if (name == null || name == "") {
+                alert("Name can't be blank.");
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("Password must be atleast 6 character long.");
+                return false;
+            }
+            else if (password != repassword) {
+                alert("Password and Re-password must be same.");
+                return false;
+            }
+            else{
+                true;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <form name="myForm" action="Hi.html" method="post" onsubmit="return validateform()">
+        Name: <input type="text" name="name"><br>
+        <br>
+        password: <input type="password" name="password"><br>
+        Re-password: <input type="password" name="repassword"><br>
+        <input type="submit" value="register">
+    </form>
+
+
+
+
+
+
+</body>
+
+</html>

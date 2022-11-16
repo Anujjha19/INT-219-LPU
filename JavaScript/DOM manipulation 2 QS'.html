@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+    <p > DOM manipulation 55/58
+        <p>querySelector is static</p>
+        <p>whereas document. is random and change on runtime</p>
+    </p>
+    <ul id="element">
+        <li class="list-item"> First </li>
+        <li class="list-item"> Second </li>
+        <li class="list-item"> Third </li>
+    </ul>
+    <div class="allDivs"> First Div</div>
+    <script>
+        //const allDiv= document.getElementsByClassName("allDivs")
+        const allDiv= document.querySelectorAll(".allDivs")
+        console.log(allDiv);
+        
+    </script>
+    <div class="allDivs">Second Div</div>
+
+    <table>
+        <tr>
+            <td>One</td>
+            <td>Two</td>
+        </tr>
+        <tr>
+            <td>Six</td>
+            <td>Four</td>
+        </tr>
+    </table>
+    
+<script>
+    //Query Selector
+    //const listItems =document.querySelector('.list-item');  //Will give only first li
+    const listItems =document.querySelectorAll('.list-item'); //Gives all the li
+    //const listItems =document.querySelector('#element');
+    console.log(listItems);
+
+    //const liLastChild =document.querySelectorAll(' ul > li:last=child');
+    
+    console.log(allDiv);
+
+
+</script>
+    
+</body>
+</html>

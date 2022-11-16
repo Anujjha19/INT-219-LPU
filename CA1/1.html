@@ -10,20 +10,20 @@
 
 <body>
     <form action="">
-        <label id="fname"  for="firstname">First Name :</label>
+        <label id="fname" for="firstname">First Name :</label>
         <input type="text" name="" id="fn">
     </form>
     <br>
-    <label id="lname"  for="lastname">Last Name :</label>
+    <label id="lname" for="lastname">Last Name :</label>
     <input type="text" name="" id="ln"> </form>
     <br>
-    <label  id="gen" for="gender">Gender :</label>
+    <label id="gen" for="gender">Gender :</label>
     <input type="radio" id="male" name="male" value="">
     <label for="male"> Male </label>
-    <input type="radio" id="male" name="female" value="">
+    <input type="radio" id="male" name="male" value="">
     <label for="female"> Female</label><br>
     <br>
-    <label  id="hobies" for="hobbies">Hobbies :</label>
+    <label id="hobies" for="hobbies">Hobbies :</label>
     <input type="checkbox" id="cricket" name="cricket" value="">
     <label for="cricket"> Cricket </label>
     <input type="checkbox" id="football" name="football" value="">
@@ -37,17 +37,18 @@
 
     <script>
         let btnSubmit = document.getElementById("btnSubmit")
-        
+
         let firstrname = document.getElementById("firstname")
         let lastname = document.getElementById("lastname")
-            // let inpname = document.getElementById("inpname")
-        var gen= document.getElementById("gender")
+        // let inpname = document.getElementById("inpname")
+        var gen = document.getElementById("gender")
         let hobbies = document.getElementById("hobies")
-        
+
 
         btnSubmit.onclick = function display_alert() {
             {
-                window.alert("First Name :"  + firstname.value + "Last Name :" + lastname.value +  "Hobbies :"   + hobbies.value +  "Gender : " + gender.value)
+                alert("First Name :" + firstname.value + "Last Name :" + lastname.value + "Hobbies :" + hobbies.value + "Gender : " + gen.value);
+
             }
         }
     </script>

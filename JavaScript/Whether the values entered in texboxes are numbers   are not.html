@@ -1,0 +1,11 @@
+function ValidateMathFunction()
+     {
+            var FN = document.forms[1].txtFN.value;
+            var SN = document.forms[1].txtSN.value;
+            if (FN == "" || SN == ""|| isNaN(FN)||isNaN(SN)) {
+                alert("Please ensure that valid data is inserted in both textboxes");
+                return false;
+            }
+            else
+                return true;
+        }

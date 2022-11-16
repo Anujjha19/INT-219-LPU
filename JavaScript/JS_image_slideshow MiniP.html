@@ -1,0 +1,71 @@
+<html>
+<head>
+<script type="text/javascript">
+    var intervalId;
+
+    function startImageSlideShow() 
+    {
+        intervalId = setInterval(setImage, 500);
+    }
+
+    function stopImageSlideShow() 
+    {
+        clearInterval(intervalId);
+    }
+
+    function setImage() 
+    {
+        var imageSrc = document.getElementById("image").getAttribute("src");
+        var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf(".jpg") + 1,imageSrc.lastIndexOf(".jpg") + 2);
+        if (currentImageNumber == 6) 
+        {
+            currentImageNumber = 0;
+        }
+        document.getElementById("image").setAttribute("src", "Images/"  +     (Number(currentImageNumber) + 1) + ".jpg");
+    }
+</script>
+</head>
+
+<body>
+<img id="image" src="image slideshow.jpg" style="width: 500px; height: 150px" />
+<br /> <br /> <br />
+<input type="button" value="Start Slide Show" onclick="startImageSlideShow()" />
+<input type="button" value="Stop Slide Show" onclick="stopImageSlideShow()" />
+</body>
+</html> 
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+        var i=0;
+        var images=[];
+        var time=3000;
+
+        images[0]= 'imageslideshow.jpg';
+        images[1]= 'imageslideshow2.jpg';
+        images[2]= 'imageslideshow 3.jpg';
+
+        function changeImg(){
+            document.slide.src=images[i];
+            if( i < images.length -1){
+                i++;
+            }else{
+                i=0;
+            }
+            setTimeout("changeImg()" , time);
+        }
+        window.onload = changeImg;
+    </script>
+</head>
+<body>
+    <img alt="slide" height="200px" width="500px">
+</body>
+</html> -->

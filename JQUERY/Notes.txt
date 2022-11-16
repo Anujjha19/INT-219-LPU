@@ -1,0 +1,130 @@
+It ia write less do more.
+Simplify JavaScript
+
+{What are the advantage of using CDN in jQuery?}
+
+When you use jQuery CDN then you are actually doing 2 positive things: Decreasing the load on your website since the jQuery file will load from a CDN and not from your website. jQuery loads faster from CDNs than from your website.
+
+{Should I download jQuery or use CDN(   Content Delivery Networks   )?}
+jQuery CDN generates functioning code that works in various browsers in a shorter time. On the other hand, Web developers require the jQuery download file to parse the library. Raw JavaScript may be faster for some processes, but the advantages of jQuery UI CDN outweigh the disadvantages
+
+//Both are same
+console.log($);
+console.log(jQuery);
+
+***    Syntax of Jquery
+$('selector').action() //syntax
+//$('p').click(); //click on P
+
+//$('p').hide(); // It hide all the p
+
+        $(this).hide(); // hide the one u clicked
+        $('#id').hide(); //to hide id
+        $('.class').hide(); // to hide class
+
+**8    So that your code load only after execution of your whole html file
+$(document).ready(function(){
+    //Your Jquery code
+})
+
+//  $(function(){}) - Can Also be written in this way
+
+
+***   There are 3 main  selectors ===  Element , Class , Id
+<body>
+    <p class="odd">This is my Body.</p>
+    <p id="second">This is my Body.</p>
+    <p class="odd" >This is my Body.</p>
+    <p>This is my Body.</p>
+</body>
+
+$('p').click(function () {
+                console.log("Clicked on P" , this);
+});
+
+
+Element selector- $('p').click(); //click on all P
+ console.log("Clicked on P" );
+
+
+ID selector- $('#second').click(); //Select all id having second
+console.log("Clicked on P" , this);
+
+Class selector- $('.odd').click(); //click on all class having odd
+console.log("Clicked on P" , this);
+
+**  Other selectors
+$('*').click();  // CLick on all the elements
+$('p.odd').click(); // Click on all odd class p is having
+$('p:first ').click(); // Click on first p
+
+
+*** Events  in jQuery
+
+Mouse events = click , dbclick, mouseenter, mouseleave 
+keyboard events = keypress , keydown , MediaKeyStatusMap (keyUp)
+form events =  submit , change , focus , blur 
+document / window events = load , resize , scroll , unload 
+ 
+//Click Event 
+    $('p').click(function () {
+        console.log("Clicked on P" , this);
+    })
+
+//Double Click Event
+    $('p').dblclick(function () {
+        console.log("You Double Clicked on P" , this);
+    })
+
+//Mouse Enter Event
+    $('p').mouseenter(function () {
+        console.log("You Mouse Enter  on P" , this);
+    })
+
+//Mouse Leave Event
+    $('p').mouseleave(function () {
+        console.log("You Mouse Leave on P" , this);
+    })
+
+//Mouse Down Event
+    $('p').mousedown(function () {
+        console.log("You Mouse Down on P" , this);
+    })
+
+//Mouse Up  Event
+    $('p').mouseup(function () {
+        console.log("You Mouse Up  on P" , this);
+    })
+
+//Hover
+$('p').hover(function () {
+    console.log("You HOVER  on P" , this);
+}
+, 
+// we can also do this
+function(){
+    console.log(" You're seeing this Because you Hover It ! ")
+}
+)
+
+JQuery is a JavaScript library, a framework that helps you use JavaScript to simplify common web tasks; Ajax is a technique using JavaScript to construct an XMLHttpRequest
+
+
+//AJAX
+Asynchronous JavaScript And XML(eXtensible Markup Language.)
+Ajax  is a art of exchanging data with a server without reloading the page and manipulating DOM
+It can send and receive information in various formats, including JSON, XML, HTML, and text files
+
+
+*** For More Button
+
+$(document).keypress(function(event){
+console.log(event.key);
+}); 
+
+$(document).keypress(function(event){
+$("#wiki").text(event.key);
+}); 
+
+
+
