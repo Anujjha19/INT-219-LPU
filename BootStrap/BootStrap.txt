@@ -1,0 +1,21 @@
+Primary  - Blue
+Secodary - Gray
+Success  - Green
+Danger   - Red
+Warning  - Yellow
+
+Light - White
+Dark  - Black
+
+https://source.unsplash.com/1600x900/?nature, water
+
+
+BY default it is 12 row in a column in  bootstrap we can decide using col-u wannt / col-no u want   ... if 2 columns
+
+Extra small  - .col-	
+Small  - .col-sm-	
+Medium  -  .col-md-	
+Large - .col-lg-
+Extra large - .col-xl-
+
+	
