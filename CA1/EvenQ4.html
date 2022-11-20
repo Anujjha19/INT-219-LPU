@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que - 4 - Change Color</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        select {
+            background-color: #252424;
+            padding: 10px;
+            width: 200;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div class="form">
+        <select name="" id="colors" onchange="changeColorOnSelect()">
+            <option value="" selected> Select a Color</option>
+            <option value="pink">Pink</option>
+            <option value="green">Green</option>
+            <option value="purple">Purple</option>
+            <option value="yellow">Yellow</option>
+        </select>
+    </div>
+
+</body>
+
+<script>
+    function changeColorOnSelect() {
+        var color = document.getElementById("colors").value;
+        document.getElementById("body").style.backgroundColor = color;
+    }
+</script>
+
+</html>

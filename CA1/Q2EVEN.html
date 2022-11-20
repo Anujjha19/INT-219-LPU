@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que 2 - Background Color toggle</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        button {
+            padding: 10px;
+            background-color: turquoise;
+            border: none;
+        }
+    </style>
+</head>
+
+<body id="body" onload="setColor()" style="background-color: rgb(123, 18, 18);">
+    <input type="hidden" name="" value="0" id="true">
+    <button id="bttn" onclick="stop()" type="button" >Stop Toggline</button>
+
+
+
+    <script>
+        
+        function setColor() {
+            let hi=setInterval(function () {
+                
+
+                var rand = Math.floor((Math.random() * 2));
+                var color = ["pink", "yellow"];
+                document.getElementById("body").style.backgroundColor = color[rand];
+
+            }, 1000)
+        }
+        function stop() {
+            clearInterval(hi);
+            document.getElementById("body").style.backgroundColor = "#fff";
+        };
+
+        
+        
+    </script>
+
+</body>
+
+</html>

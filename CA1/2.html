@@ -2,27 +2,58 @@
 
 <head></head>
 <style>
-    #div1{
+    #div1 {
         height: 50vh;
         width: 50vw;
-        background-color: black;    }
+        background-color: black;
+    }
 </style>
 
 <body>
 
-<div  id="div1"></div>
+    <div id="div1"></div>
 
-<script>
-/* Write your code here*/
-var i=0
-function change() {  
-    var doc = document.getElementById("div1");  
-    var color =[ "red", "blue", "brown", "green","gray"];  
-    doc.style.backgroundColor= color[i];
-    i=(i+1) % color.length;
-}
-setInterval(change , 2000);
+    <script>
+        /* Write your code here*/
+        var i = 0
+        function change() {
+            var doc = document.getElementById("div1");
+            var color = ["red", "blue", "brown", "green", "gray"];
+            doc.style.backgroundColor = color[i];
+            i = (i + 1) % color.length;
 
-</script>
+
+        }
+        setInterval(change, 2000);
+
+    </script>
 
 </body>
+
+<!-- 
+    <!DOCTYPE html>
+<html>
+
+<head>
+
+<body>
+    <button id="btn">Change Color</button>
+
+    <script>
+
+        let color=['red', 'orange' , 'yellow' ,'green' ,'blue'];
+        let btn= document.getElementById('btn');
+        btn.addEventListener('mouseover' , function(){
+            let randomColor=color[  Math.floor(Math.random()* color.length)];
+
+            document.body.style.background=randomColor;
+        });
+
+
+
+    </script>
+</body>
+</head>
+
+< /html>
+    -->

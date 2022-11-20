@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <img id="img" src="./bulb-off.jpg" alt="">
+    <button id="btn" onclick="off()">OFF</button>
+    <button id="btn" onclick="on()">ON</button>
+
+    <button id="newBtn" onclick="onoff()">On</button>
+
+</body>
+
+<script>
+var newBtn= document.getElementById('newBtn');
+function off() {
+    document.getElementById('img').src='./bulb-off.jpg';
+  }
+function on() {
+    document.getElementById('img').src='./bulb-on.jpg';
+  }
+
+  function onoff() {
+    
+    if(newBtn.textContent.includes('On')){
+    document.getElementById('img').src='./bulb-on.jpg';
+    newBtn.innerHTML= "Off";
+    }
+    else{
+        document.getElementById('img').src='./bulb-off.jpg';
+    newBtn.innerHTML= "On";
+    }
+
+
+}
+    
+
+
+</script>
+</html>

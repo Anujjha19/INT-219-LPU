@@ -1,24 +1,14 @@
 let obj={
-
-    name:"Shir",
-    
+    name:'shir',
     quantity:5,
-    
     price:0,
-    };
-    getTotal:
-    function myFunction(unitPrice)
     
-    {
-    
-    price =price+unitPrice;
-    
-    return price;
-    
+    getTotal: function(unitPrice){
+        let price=0;
+        price= price + unitPrice;
+        return price;
     }
-    
-    };
-    
-    console.log("Total price of product is ${obj.price}." );
-    
-    console.log(obj.getTotal(100));
+}
+
+console.log("Total Peice of Product is " + obj.price);
+console.log(obj.getTotal(100));

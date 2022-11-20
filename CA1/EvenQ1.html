@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Que 1 - Form</title>
+    <style>
+        .form-input {
+            padding: 6px 0px;
+        }
+        
+        #form {
+            border: 1px #000 solid;
+            width: 300px;
+            padding: 10px;
+        }
+        
+        input,
+        select {
+            float: right;
+        }
+        
+        select {
+            width: 148px;
+        }
+        
+        input [type=button] {
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="form">
+        <div class="form-input">
+            <label for="fullname">Full Name: </label>
+            <input type="text" id="fullname">
+        </div>
+        <div class="form-input">
+            <label for="username">userame: </label>
+            <input type="text" id="username">
+        </div>
+        <div class="form-input">
+            <label for="password">Password: </label>
+            <input type="password" id="password">
+        </div>
+        <div class="form-input">
+            <label for="rpassword">Re Password: </label>
+            <input type="password" id="rpassword">
+        </div>
+        <div class="form-input">
+            <label for="address">Address: </label>
+            <input type="text" id="address">
+        </div>
+        <div class="form-input">
+            <label for="age">Age: </label>
+            <input type="text" id="age">
+        </div>
+        <div class="form-input">
+            <label for="gender">Gender: </label>
+            <select id="gender">
+                    <option value="male" selected> Male</option>
+                    <option value="male"> Female</option>
+                </select>
+        </div>
+        <div class="form-input">
+            <button id="saveButton" onclick="doTheTask()">Save</button>
+        </div>
+    </div>
+
+
+</body>
+
+<script>
+    function doTheTask() {
+        var fullname = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var age = document.getElementById("age").value;
+        var gender = document.getElementById("gender").value;
+        alert("Username: " + fullname + " Password: " + password + " Age: " + age + " Gender: " + gender)
+
+        // As per instruction only username, password, age and gender are displayed
+    }
+</script>
+
+</html>

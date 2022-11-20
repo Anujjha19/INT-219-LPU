@@ -1,14 +1,34 @@
 <html>
     <body>
         <div id="pie" class ="demo" >
+        
+            
+        <img  id = "myImg" class ="image" src="./cat.jpg" ondblclick="change()" width ="250" height="250">
 
-            <img id = "myImg" class ="image" src="pie.jpg" onclick="this.src='changeimage.jpg' " onclick="this.src='pie.jpg'"  width ="250" height="250">
+
+
+
         </div>
         <script>
-            function myFunction(){
-                document.getElementById("myImg").src ="changeimage.jpg";
+            function change(){
+                var image= document.getElementById("myImg");
+
+                image.src='./bulb-on.jpg';
             }
 
         </script>
     </body>
 </html>
+<!-- 
+if(image.src='./cat.jpg'){
+    image.src='./bulb-on.jpg';
+}else if(image.src='./bulb-on.jpg')
+{
+    image.src='./cat.jpg';
+} -->
+<!-- function change(){
+    var image= document.getElementById("myImg");
+
+    image.src='./bulb-on.jpg';
+}
+ -->

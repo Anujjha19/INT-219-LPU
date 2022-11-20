@@ -17,38 +17,42 @@
     <label id="lname" for="lastname">Last Name :</label>
     <input type="text" name="" id="ln"> </form>
     <br>
+
+    <section id="genderVal">
     <label id="gen" for="gender">Gender :</label>
     <input type="radio" id="male" name="male" value="">
     <label for="male"> Male </label>
     <input type="radio" id="male" name="male" value="">
     <label for="female"> Female</label><br>
-    <br>
-    <label id="hobies" for="hobbies">Hobbies :</label>
+    <br></section>
+    <label id="hobbies" for="hobbies">Hobbies :</label>
     <input type="checkbox" id="cricket" name="cricket" value="">
     <label for="cricket"> Cricket </label>
     <input type="checkbox" id="football" name="football" value="">
     <label for="football"> Football</label><br>
     <br>
     <!-- <button type="button"> button</button> -->
-    <input id="btnSubmit" type="button" onclick="display_alert()" value="button">
-
-
+    <input id="btnSubmit" type="button" onclick="displayAlert()" value="button">
 
 
     <script>
         let btnSubmit = document.getElementById("btnSubmit")
 
-        let firstrname = document.getElementById("firstname")
-        let lastname = document.getElementById("lastname")
+        let firstname = document.getElementById("fn")
+        let lastname = document.getElementById("ln")
         // let inpname = document.getElementById("inpname")
-        var gen = document.getElementById("gender")
-        let hobbies = document.getElementById("hobies")
-        
+        var gen = document.getElementById("genderVal")
+        let hobbies = document.getElementById("hobbies")
 
-      /*  btnSubmit.onclick = function display_alert() {
-            {
-                // alert("First Name :" + firstname.value + "Last Name :" + lastname.value + "Hobbies :" + hobbies.value + "Gender : " + gen.value);
-                alert(firstrname.value);*/
+
+        function displayAlert() {
+            var fname = firstname.value;
+            var lname = lastname.value;
+            var genVal = gen.value;
+            var hobbie = hobbies.value;
+
+            alert("First Name : " + fname + " \n" + "Last Name : " + lname + " \n" + "Gender : " + gen + " \n");
+        }
 
     </script>
 </body>

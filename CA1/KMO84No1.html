@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        table {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>Name</td>
+            <th>Age</td>
+        </tr>
+        <tr>
+            <td class="r1" id="1">Rahul</td>
+            <td class="r1" id="2"></td>
+        </tr>
+        <tr>
+            <td class="r2" id="3">Saj</td>
+            <td class="r2" id="4"></td>
+        </tr>
+    </table>
+
+    
+
+
+    <script>
+        let r= document.getElementById("1");
+        let s=document.getElementById("3");
+        let rA= document.getElementById("2");
+        let sA=document.getElementById("4");
+
+        r.addEventListener('click' , function(){
+            rA.innerText='25';
+        })
+        s.addEventListener('click' , function(){
+            sA.innerText='20';
+        })
+
+
+    </script>
+</body>
+
+</html>

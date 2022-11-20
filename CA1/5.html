@@ -1,0 +1,41 @@
+<html>
+
+<body>
+
+    <button id="btn" onclick="displayIncome()">Annual Income</button>
+
+
+    <script>
+
+
+
+        let Manufacturer = {
+            name: "Priyank",
+            monthly_Income: 20000,
+            ITR_ID: 22586
+
+        };
+
+        function displayIncome() {
+            let a = Manufacturer.monthly_Income * 12;
+
+
+            var bttn = document.getElementById("btn");
+            bttn.innerText = a;
+        }
+
+        // Exploring Set timeOut
+        onclick = setTimeout(function displayIncome() {
+            let a = Manufacturer.monthly_Income * 12;
+
+            var bttn = document.getElementById("btn");
+            bttn.innerHTML = a;
+
+        }, 3000);
+
+
+
+    </script>
+</body>
+
+</html>
