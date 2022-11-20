@@ -1,9 +1,3 @@
-. Implement a web page with JavaScript to accept user marks as input and display alert message for the following grades
-
-Marks Grades
-70-100 Distinction
-60-70 First class
-40-60 Second class
 
 2. Implement an image gallery with the following structure
 1
