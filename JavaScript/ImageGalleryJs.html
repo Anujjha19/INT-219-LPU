@@ -1,118 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-<title>Home</title>
-<style>
-h1{
-    margin: auto;
-    padding: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-body{
-    
-	background: #fff;
-	min-height: 100vh;
-	background:linear-gradient( to right bottom , #273c75 ,  #079992  );
-	background-repeat: no-repeat;
-}
-img{
-	max-width: 100%;
-}
-.container{
-	padding: 40px 0;
-}
-figure{
-	max-width: 300px;
-	margin: 0 auto 40px;
-	border:2px solid rgb(208, 6, 6);
-}
-figure img{
-	max-width: 100%;
-	min-width: 100%;
-	display: block;
-}
-ul{
-	list-style: none;
-	margin: 0;
-	text-align: center;
-}
-ul li{
-	margin: 0 5px;
-	display: inline-block;
-	width: 100px;
-	border:1px solid #fff;
-	cursor: pointer;
-}
-ul li img{
-	display: block;
-}
-ul{
-    display: block;
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
+	<title>Home</title>
+	<style>
+		h1 {
+			margin: auto;
+			padding: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 
-}
-ul li img{
-    width: 400px;
-    height: 100px;
-    justify-content: space-between;
-}
+		body {
 
-</style>
+			background: #fff;
+			min-height: 100vh;
+			background: linear-gradient(to right bottom, #273c75, #079992);
+			background-repeat: no-repeat;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.container {
+			padding: 40px 0;
+		}
+
+		figure {
+			max-width: 300px;
+			margin: 0 auto 40px;
+			border: 2px solid rgb(208, 6, 6);
+		}
+
+		figure img {
+			max-width: 100%;
+			min-width: 100%;
+			display: block;
+		}
+
+		ul {
+			list-style: none;
+			margin: 0;
+			text-align: center;
+		}
+
+		ul li {
+			margin: 0 5px;
+			display: inline-block;
+			width: 100px;
+			border: 1px solid #fff;
+			cursor: pointer;
+		}
+
+		ul li img {
+			display: block;
+		}
+
+		ul {
+			display: block;
+
+		}
+
+		ul li img {
+			width: 400px;
+			height: 100px;
+			justify-content: space-between;
+		}
+	</style>
 
 
 
 </head>
+
 <body>
-    <h1>Image Gallery Using JS</h1>
+	<h1>Image Gallery Using JS</h1>
 
-<div class="container">
-	<figure>
-		<img id="mainImg" src="../bulb-off.jpg">
-	</figure>
+	<div class="container">
+		<figure>
+			<img id="mainImg" src="../bulb-off.jpg" height="500" width="540">
+		</figure>
 
-	<ul>
-		<li><img id="thumb1" src="../bulb-on.jpg"></li>
-		<li><img id="thumb2" src="../bike.jpg"></li>
-		<li><img id="thumb3" src="../car.jpg"></li>
-		<li><img id="thumb4" src="../bulb-off.jpg"></li>
-	</ul>
+		<ul>
+			<li><img id="thumb1" src="../bulb-on.jpg"></li>
+			<li><img id="thumb2" src="../bike.jpg"></li>
+			<li><img id="thumb3" src="../car.jpg"></li>
+			<li><img id="thumb4" src="../bulb-off.jpg"></li>
+		</ul>
 
-</div>
+	</div>
 
-<script>
-var mainImg= document.getElementById("mainImg");
-//var mainImgSrc= document.getElementById("mainImg").src;
+	<script>
+		var mainImg = document.getElementById("mainImg");
+		//var mainImgSrc= document.getElementById("mainImg").src;
 
-var thumb1=document.getElementById("thumb1");
-var thumb1Src= thumb1.src;
-var thumb2=document.getElementById("thumb2");
-var thumb2Src= thumb2.src;
-var thumb3=document.getElementById("thumb3");
-var thumb3Src= thumb3.src;
-var thumb4=document.getElementById("thumb4");
-var thumb4Src= thumb4.src;
+		var thumb1 = document.getElementById("thumb1");
+		var thumb1Src = thumb1.src;
+		var thumb2 = document.getElementById("thumb2");
+		var thumb2Src = thumb2.src;
+		var thumb3 = document.getElementById("thumb3");
+		var thumb3Src = thumb3.src;
+		var thumb4 = document.getElementById("thumb4");
+		var thumb4Src = thumb4.src;
 
-thumb1.addEventListener("click" ,function(){
-    mainImg.src= thumb1Src;
-})
-thumb2.addEventListener("click" ,function(){
-    mainImg.src= thumb2Src;
-})
-thumb3.addEventListener("click" ,function(){
-    mainImg.src= thumb3Src;
-})
-thumb4.addEventListener("click" ,function(){
-    mainImg.src= thumb4Src;
-})
+		thumb1.addEventListener("click", function () {
+			mainImg.src = thumb1Src;
+		})
+		thumb2.addEventListener("click", function () {
+			mainImg.src = thumb2Src;
+		})
+		thumb3.addEventListener("click", function () {
+			mainImg.src = thumb3Src;
+		})
+		thumb4.addEventListener("click", function () {
+			mainImg.src = thumb4Src;
+		})
 
 
 
-    
-</script>
+
+	</script>
 </body>
+
 </html>
 
 

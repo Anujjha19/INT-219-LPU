@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    Enter First Number <input type="number" name="txtFN" value="" id="a" /> <br />
+    <br>
+    Enter Second Number <input type="number" name="txtSN" value="" id="b" /><br />
+    <input type="submit" id="btnAdd" value="+" onclick="add()" />
+    <input type="submit" id="btnSub" value="-" onclick="subtract()" />
+    <input type="submit" id="btnMul" value="*" onclick="multiply()" />
+    <input type="submit" id="btnDel" value="/" onclick="divide()" />
+    <br><br>
+    <input type="number" name="txtFN" id="answer" />
+
+    <script>
+        function add() {
+            let add = document.getElementById("btnAdd");
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            c = a + b;
+
+            document.getElementById('answer').value = c;
+        }
+        function subtract() {
+            let add = document.getElementById("btnAdd");
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            c = a - b;
+
+            document.getElementById('answer').value = c;
+        }
+        function  multiply() {
+            let add = document.getElementById("btnAdd");
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            c = a * b;
+
+            document.getElementById('answer').value = c;
+        }
+        function divide() {
+            let add = document.getElementById("btnAdd");
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            c = a / b;
+
+            document.getElementById('answer').value = c;
+        }
+    </script>
+</body>
+
+</html>

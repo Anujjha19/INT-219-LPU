@@ -1,38 +1,36 @@
 <html>
+
 <head>
-<script type="text/javascript">
-    var intervalId;
+    <script type="text/javascript">
+        var intervalId;
 
-    function startImageSlideShow() 
-    {
-        intervalId = setInterval(setImage, 500);
-    }
-
-    function stopImageSlideShow() 
-    {
-        clearInterval(intervalId);
-    }
-
-    function setImage() 
-    {
-        var imageSrc = document.getElementById("image").getAttribute("src");
-        var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf(".jpg") + 1,imageSrc.lastIndexOf(".jpg") + 2);
-        if (currentImageNumber == 6) 
-        {
-            currentImageNumber = 0;
+        function startImageSlideShow() {
+            intervalId = setInterval(setImage, 500);
         }
-        document.getElementById("image").setAttribute("src", "Images/"  +     (Number(currentImageNumber) + 1) + ".jpg");
-    }
-</script>
+
+        function stopImageSlideShow() {
+            clearInterval(intervalId);
+        }
+
+        function setImage() {
+            var imageSrc = document.getElementById("image").getAttribute("src");
+            var currentImageNumber = imageSrc.substring(imageSrc.lastIndexOf(".jpg") + 1, imageSrc.lastIndexOf(".jpg") + 2);
+            if (currentImageNumber == 6) {
+                currentImageNumber = 0;
+            }
+            document.getElementById("image").setAttribute("src", "Images/" + (Number(currentImageNumber) + 1) + ".jpg");
+        }
+    </script>
 </head>
 
 <body>
-<img id="image" src="image slideshow.jpg" style="width: 500px; height: 150px" />
-<br /> <br /> <br />
-<input type="button" value="Start Slide Show" onclick="startImageSlideShow()" />
-<input type="button" value="Stop Slide Show" onclick="stopImageSlideShow()" />
+    <img id="image" src="image slideshow.jpg" style="width: 500px; height: 150px" />
+    <br /> <br /> <br />
+    <input type="button" value="Start Slide Show" onclick="startImageSlideShow()" />
+    <input type="button" value="Stop Slide Show" onclick="stopImageSlideShow()" />
 </body>
-</html> 
+
+</html>
 
 <!-- 
 <!DOCTYPE html>
