@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .form-group {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname">
+        </div>
+        <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname">
+        </div>
+        <div class="form-group">
+            <span>Gender: </span>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male"> Male </label>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female"> Female </label>
+        </div>
+        <div class="form-group">
+            <span>Hobbies: </span>
+            <input type="checkbox" id="cricket" value="Cricket" name="sports">
+            <label for="cricket">Cricket</label>
+            <input type="checkbox" id="football" value="Football" name="sports">
+            <label for="football">Football</label>
+        </div>
+        <button id="btn">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        let submitBtn = document.getElementById("btn");
+        submitBtn.addEventListener("click", function () {
+            let FirstName = document.getElementById("fname").value;
+            let LastName = document.getElementById("lname").value;
+            let gender = document.getElementsByName("gender");
+            let hobbies = document.getElementsByName("sports");
+
+            let x = "";
+            let y = "";
+
+            // for displaying gender
+            for (let g of gender) {
+                if (g.checked)
+                    x += g.value;
+            }
+            //for displaying hobbies 
+            for (let s of hobbies) {
+                if (s.checked)
+                    y += s.value + " ";
+            }
+
+            alert("First Name: " + FirstName + "\nLast Name: " + LastName + "\nGender: " + x + "\nHobbies: " + y);
+
+        });
+
+    </script>
+</body>
+
+</html>

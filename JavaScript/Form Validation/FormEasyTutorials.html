@@ -130,19 +130,20 @@
             <div class="input-group">
                 <label>Phone No.</label>
                 <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()">
-                
-                    <span id="phone-error"></span>
+
+                <span id="phone-error"></span>
             </div>
 
             <div class="input-group">
                 <label>Email Id</label>
-                <input type="email" placeholder="Enter Email"id="contact-email" onkeyup="validateEmail()">
+                <input type="email" placeholder="Enter Email" id="contact-email" onkeyup="validateEmail()">
                 <span id="email-error"></span>
             </div>
 
             <div class="input-group">
                 <label>Your Message</label>
-                <textarea rows="5" placeholder="Enter your message" id="contact-message" onkeyup="validateMessage()"></textarea>
+                <textarea rows="5" placeholder="Enter your message" id="contact-message"
+                    onkeyup="validateMessage()"></textarea>
                 <span id="message-error"></span>
             </div>
 
@@ -152,7 +153,7 @@
         </form>
 
 
-        
+
 
     </div>
 
@@ -200,46 +201,47 @@
             return true;
         }
 
-function validateEmail(){
-    var email= document.getElementById('contact-email').value;
+        function validateEmail() {
+            var email = document.getElementById('contact-email').value;
 
-    if(email.length ==0){
-        emailError.innerHTML='Email is Required';
-        return false;
-    }
-    
-    if(email.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)){
-        emailError.innerHTML='Invalid Email';
-        return false;
-    }
-    emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
+            if (email.length == 0) {
+                emailError.innerHTML = 'Email is Required';
+                return false;
+            }
+
+            if (email.match(/^[A-Za-z]\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+                emailError.innerHTML = 'Invalid Email';
+                return false;
+            }
+            emailError.innerHTML = '<i class="fas fa-check-circle"></i>';
             return true;
-}
-function validateMessage(){
-    var message= document.getElementById('contact-message').value;
+        }
+        function validateMessage() {
+            var message = document.getElementById('contact-message').value;
 
-    var required= 30;
-    var left= required - message.length;
+            var required = 30;
+            var left = required - message.length;
 
-    if(left >0){
-        messageError.innerHTML= left +' more characters required';
-        return false;
-    }
-    messageError.innerHTML = '<i class="fas fa-check-circle"></i>';
+            if (left > 0) {
+                messageError.innerHTML = left + ' more characters required';
+                return false;
+            }
+            messageError.innerHTML = '<i class="fas fa-check-circle"></i>';
             return true;
-}
-function validateForm(){
+        }
+        function validateForm() {
 
-    if(!validateName() || !validatePhone() || !validateEmail() || !validateMessage() ){
-        submitError.style.display='block';
-        submitError.innerHTML='Please Fix the Errors.';
-        setTimeout(function(){
-            submitError.style.display='none';} , 3000);
-        
-        return false;
-    }
+            if (!validateName() || !validatePhone() || !validateEmail() || !validateMessage()) {
+                submitError.style.display = 'block';
+                submitError.innerHTML = 'Please Fix the Errors.';
+                setTimeout(function () {
+                    submitError.style.display = 'none';
+                }, 3000);
 
-}
+                return false;
+            }
+
+        }
 
     </script>
 

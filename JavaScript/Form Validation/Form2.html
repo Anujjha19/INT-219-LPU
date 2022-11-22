@@ -20,7 +20,6 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-attachment: fixed;
-
         }
 
         .container {
@@ -65,7 +64,7 @@
             outline: #e0c3fc;
         }
 
-        .formgroup> :where(#name, #number,  #email, #password) {
+        .formgroup> :where(#name, #number, #email, #password) {
             height: 35px;
             width: 100%;
             font-size: 15px;
@@ -135,8 +134,8 @@
                 </div>
                 <div class="formgroup">
                     <label for="number">Contact No.</label>
-                    <input type="tel" name="number" id="number" class="number"  minlength="0"
-                    maxlength="10" placeholder="Enter your number" >
+                    <input type="tel" name="number" id="number" class="number" minlength="0" maxlength="10"
+                        placeholder="Enter your number">
                     <div id="error_number">Please enter your contact number</div>
                 </div>
                 <div class="formgroup">
@@ -182,90 +181,90 @@
 
     <script type="text/javascript">
 
-let error_name=document.getElementById("error_name");
-let error_number=document.getElementById("error_number");
-let error_email=document.getElementById("error_email");
-let error_password=document.getElementById("error_password");
-let error_country=document.getElementById("error_country");
-let error_gender=document.getElementById("error_gender");
-let error_check=document.getElementById("error_check");
+        let error_name = document.getElementById("error_name");
+        let error_number = document.getElementById("error_number");
+        let error_email = document.getElementById("error_email");
+        let error_password = document.getElementById("error_password");
+        let error_country = document.getElementById("error_country");
+        let error_gender = document.getElementById("error_gender");
+        let error_check = document.getElementById("error_check");
 
-function validation(){
-    var form_name= document.forms.register;
-    var name= form_name.name.value;
-    var number= form_name.number.value;
-    var email= form_name.email.value;
-    var password= form_name.password.value;
-    var country= form_name.country.value;
-    var gender= form_name.gender.gender;
-    var check= form_name.name.check;
+        function validation() {
+            var form_name = document.forms.register;
+            var name = form_name.name.value;
+            var number = form_name.number.value;
+            var email = form_name.email.value;
+            var password = form_name.password.value;
+            var country = form_name.country.value;
+            var gender = form_name.gender.gender;
+            var check = form_name.name.check;
 
-    if(name==""){
-        error_name.style.display="block";
-        form_name.name.focus();
-        return false;
-    }
-    if(name !=""){
-        error_name.style.display="none";
-    }
-    
-    if(number==""){
-        error_number.style.display="block";
-        form_name.number.focus();
-        return false;
-    }
-    if(number !=""){
-        error_number.style.display="none";
-    }
-    
-    if(email==""){
-        error_email.style.display="block";
-        form_name.email.focus();
-        return false;
-    }
-    if(email !=""){
-        error_email.style.display="none";
-    }
-    
-    if(password==""){
-        error_password.style.display="block";
-        form_name.password.focus();
-        return false;
-    }
-    if(password !=""){
-        error_password.style.display="none";
-    }
-    
-    if(country==""){
-        error_country.style.display="block";
-        form_name.country.focus();
-        return false;
-    }
-    if(country !=""){
-        error_country.style.display="none";
-    }
-    
-    if(!(gender[0].checked == true || gender[1].checked == true )){
-        error_gender.style.display="block";
-        return false;
-    }
-    if((gender[0].checked == true || gender[1].checked == true )){
-        error_gender.style.display="none";
-    }
-    
-    if(check.checked == false){
-        error_check.style.display="block";
-        return false;
-    }
-    if(check.checked == true){
-        error_check.style.display="none";
-    }
+            if (name == "") {
+                error_name.style.display = "block";
+                form_name.name.focus();
+                return false;
+            }
+            if (name != "") {
+                error_name.style.display = "none";
+            }
 
-    if(form_name){
-        alert(" You have Successfully registered !");
-    }
+            if (number == "") {
+                error_number.style.display = "block";
+                form_name.number.focus();
+                return false;
+            }
+            if (number != "") {
+                error_number.style.display = "none";
+            }
 
-}
+            if (email == "") {
+                error_email.style.display = "block";
+                form_name.email.focus();
+                return false;
+            }
+            if (email != "") {
+                error_email.style.display = "none";
+            }
+
+            if (password == "") {
+                error_password.style.display = "block";
+                form_name.password.focus();
+                return false;
+            }
+            if (password != "") {
+                error_password.style.display = "none";
+            }
+
+            if (country == "") {
+                error_country.style.display = "block";
+                form_name.country.focus();
+                return false;
+            }
+            if (country != "") {
+                error_country.style.display = "none";
+            }
+
+            if (!(gender[0].checked == true || gender[1].checked == true)) {
+                error_gender.style.display = "block";
+                return false;
+            }
+            if ((gender[0].checked == true || gender[1].checked == true)) {
+                error_gender.style.display = "none";
+            }
+
+            if (check.checked == false) {
+                error_check.style.display = "block";
+                return false;
+            }
+            if (check.checked == true) {
+                error_check.style.display = "none";
+            }
+
+            if (form_name) {
+                alert(" You have Successfully registered !");
+            }
+
+        }
 
     </script>
 </body>
