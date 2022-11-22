@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -25,9 +25,7 @@
         </tr>
         <tr>
             <div class="timerDisplay">
-                <td id="h">0</td>
-                <td id="m">0</td>
-                <td id="s">0</td>
+                0:0:0
             </div>
         </tr>
     </table>
@@ -49,6 +47,7 @@
 
         });
         function displayTimer() {
+            seconds++;
             if (seconds == 60) {
                 seconds = 0;
                 minutes++;
@@ -63,6 +62,77 @@
         let s = seconds < 10 ? "0" + seconds : seconds;
 
         time.innerHTML=`${h} :${m} :${s}`
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container" style="">
+        <div class="timerDisplay">
+            00 : 00 : 00
+        </div>
+        <div class="buttons">
+            <button id="pauseTimer">Pause</button>
+            <button id="startTimer">Start</button>
+            <button id="resetTimer">Reset</button>
+        </div>
+    </div>
+
+
+    <script>
+        let [seconds, minutes, hours] = [0, 0, 0];
+        let timerRef = document.querySelector('.timerDisplay');
+        let int = null;
+
+        document.getElementById('startTimer').addEventListener('click', () => {
+            if (int !== null) {
+                clearInterval(int);
+            }
+            int = setInterval(displayTimer, 10);
+        });
+
+        document.getElementById('pauseTimer').addEventListener('click', () => {
+            clearInterval(int);
+        });
+
+        document.getElementById('resetTimer').addEventListener('click', () => {
+            clearInterval(int);
+            [seconds, minutes, hours] = [0, 0, 0];
+            timerRef.innerHTML = '00 : 00 : 00 ';
+        });
+
+        function displayTimer() {
+            seconds += 1;
+
+            seconds++;
+            if (seconds == 60) {
+                seconds = 0;
+                minutes++;
+                if (minutes == 60) {
+                    minutes = 0;
+                    hours++;
+                }
+
+            }
+
+            let h = hours < 10 ? "0" + hours : hours;
+            let m = minutes < 10 ? "0" + minutes : minutes;
+            let s = seconds < 10 ? "0" + seconds : seconds;
+
+
+            timerRef.innerHTML = ` ${h} : ${m} : ${s} `;
+        }
     </script>
 </body>
 

@@ -1,4 +1,4 @@
-It ia write less do more.
+It is a write less do more.
 Simplify JavaScript
 
 {What are the advantage of using CDN in jQuery?}
@@ -22,7 +22,7 @@ $('selector').action() //syntax
         $('#id').hide(); //to hide id
         $('.class').hide(); // to hide class
 
-**8    So that your code load only after execution of your whole html file
+***    So that your code load only after execution of your whole html file
 $(document).ready(function(){
     //Your Jquery code
 })

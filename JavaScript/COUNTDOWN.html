@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .countdown{
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        justify-content: space-around;
+
+    }
+</style>
+<body>
+
+
+    <div class="coming-soon">
+        <div>
+            <h2>Count Down</h2>
+            <div class="countdown">
+                <div class="container-day">
+                    <h3 class="day">
+                        Day
+                    </h3>
+                </div>
+                <div class="container-hour">
+                    <h3 class="hour">
+                        Hour
+                    </h3>
+                </div>
+                <div class="container-minute">
+                    <h3 class="minute">
+                        Minute
+                    </h3>
+                </div>
+                <div class="container-second">
+                    <h3 class="second">
+                        Second
+                    </h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const countdown = () => {
+            const countDate = new Date("November 30, 2022 00:00:00").getTime();
+            const now = new Date().getTime();
+            const gap= countDate - now;
+
+            const second=1000;
+            const minute= second*60;
+            const hour= minute*60;
+            const day= hour*24;
+
+            const textDay=Math.floor(gap/day) ;
+            const textHour=Math.floor((gap % day) /hour );
+            const textMinute=Math.floor((gap % hour) /minute) ;
+            const textSecond=Math.floor((gap % minute)/ second) ;
+            
+            document.querySelector('.day').innerText=textDay + " Day";
+            document.querySelector('.hour').innerText=textHour  + " Hour";
+            document.querySelector('.minute').innerText=textMinute  + " Minute";
+            document.querySelector('.second').innerText=textSecond  + " Seconds";
+
+            
+
+            setInterval(countdown ,1000);
+
+
+    }
+
+    countdown();
+    </script>
+</body>
+
+</html>
