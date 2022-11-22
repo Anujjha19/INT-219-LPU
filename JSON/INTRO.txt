@@ -1,0 +1,17 @@
+JSON stands for JavaScript Object Notation
+JSON is a text format for storing and transporting data
+
+The JSON syntax is derived from JavaScript object notation, but the JSON format is text only.
+
+
+
+JavaScript has a built in function for converting JSON strings into JavaScript objects:
+JSON.parse()
+
+JavaScript also has a built in function for converting an object into a JSON string:
+JSON.stringify()
+
+Data is separated by commas
+Curly braces hold objects
+Square brackets hold arrays
+-   "name":"John"

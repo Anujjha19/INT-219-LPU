@@ -1,0 +1,15 @@
+
+{
+    "name":"harry",
+    "score" :11.75,
+    "isAdmin":false,
+    "license":null,
+    "shopItem":["food", "clothes" ,"oil"],
+    "myObj":{
+        "name": "nested JSON",
+        "marks":90,
+        "shopItem2":["food", "clothes" ,{"a":true}]
+    }
+}
+
+
