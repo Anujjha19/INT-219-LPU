@@ -1,17 +1,43 @@
-JSON stands for JavaScript Object Notation
-JSON is a text format for storing and transporting data
+• JSON stands for JavaScript Object Notation
+• JSON is a text format for storing and transporting   data
+• It does not contain namespaces and Comments
 
 The JSON syntax is derived from JavaScript object notation, but the JSON format is text only.
 
+• Advantages   - it can easily be sent to and from a server ,  language Independent , supports all programming language, light weight , easy to organise 
+
+• Disadvantages - Can not use media or audio in JSON
 
 
-JavaScript has a built in function for converting JSON strings into JavaScript objects:
+• JavaScript has a built in function for converting JSON strings into JavaScript objects:
 JSON.parse()
 
-JavaScript also has a built in function for converting an object into a JSON string:
+• JavaScript also has a built in function for converting an object into a JSON string:
 JSON.stringify()
 
 Data is separated by commas
 Curly braces hold objects
 Square brackets hold arrays
 -   "name":"John"
+
+JSON Writing ----
+{
+    "name":"harry",
+    "score" :11.75,
+    "isAdmin":false,
+    "license":null,
+    "place":, 
+    "shopItem":["food", "clothes" ,"oil"],
+    "myObj":{
+        "name": "nested JSON",
+        "marks":90,
+        "shopItem2":["food", "clothes" ,{"a":true}]
+    }
+}
+
+
+• Use the delete keyword to delete items from an array:
+delete myObj.rights[1];
+
+• Use the index number to modify an array:
+myObj.rights[1] = "blogger";
