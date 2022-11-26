@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../JQUERY/jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <ul id="ul1">
+        <li>HI</li>
+        <li>Helllo</li>
+        <li>Bye</li>
+    </ul>
+    <ol id="0l1">
+        <li>123</li>
+        <li>456</li>
+        <li>789</li>
+    </0l>
+    <button id="btn"> Append Click</button>
+    <button id="btn2"> Delete Click</button>
+
+    <script>
+        let btn=document.getElementById('btn');
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('li').append(" <b>Text Append </b>")
+                $('li').prepend(" <b>Text Prepend </b>")
+                $('li').after(" <b>Text after </b>")
+                $('li').before(" <b>Text Before </b>")
+            })
+        
+            $('#btn2').click(function(){
+                $('ol').remove();
+            })
+
+            
+        })
+    </script>
+</body>
+</html>

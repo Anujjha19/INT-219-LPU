@@ -1,0 +1,69 @@
+
+
+<h1>Devloping A Forms</h1>
+
+<form  [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" placeholder="Enter Name" name="" id="" formControlName="user" >
+  <br>
+  <br>
+  <input type="password" placeholder="Enter Pasword" name="" id="" formControlName="password">
+  <br>
+  <br>
+
+  <!-- <img src="{{ src }}" alt="{{ name}}">
+  {{name}} by {{author}} -->
+  Property Binding
+  <img [src]="src " [alt]=" name" width="100">
+  {{name}} by {{author}}
+
+
+
+  <!-- <button disabled={{isDisabled}} type="submit"> Login </button> -->
+  <!-- <button  (click)="handleClick() " [disabled]="isDisabled" type="submit"> Login </button> -->
+  event Binding
+  <button  (click)="handleClick() " type="submit"> Login </button>
+
+  <br>
+  <br>
+  Two Way Binding
+
+  <input type="text" (input)="handleInput($event)" />
+
+  <!-- <input type="text" [(ngModel)]="myName" /> -->
+  <div><p>{{myName}}</p></div>
+
+
+  NgIf
+<!-- <button (click)="toggleList()">Toggle List</button> -->
+<button (click)="isShowing = !isShowing">
+  <span *ngIf ="!isShowing">Show Books</span>
+  <ng-container *ngIf="isShowing">Hide Books</ng-container>
+  <!-- =Toggle List -->
+</button>
+
+  <ul *ngIf="isShowing">
+    <li>Orange</li> {{ name1 }}
+    <li>Apple</li> {{ name2 }}
+    <li>Liwi</li> {{ name3 }}
+  </ul>
+
+  NgFor
+
+  <ul>
+    <li *ngFor="let book of books , let i = index" >
+      {{i+1}}
+      <img [src]="book.image" alt="book.author" width="100">
+
+      {{book.name | titlecase }} by {{book.author }}
+      <p>{{book.amount | currency : 'INR'}}</p>
+
+    </li>
+  </ul>
+
+  Pipes
+
+
+
+
+</form>
+

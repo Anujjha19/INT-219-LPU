@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Bootstrap 4 Dropdowns within Split Buttons</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .bs-example {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bs-example">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Action</button>
+            <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                data-toggle="dropdown"></button>
+
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+            </div>
+        </div>
+        <br><br>
+        <div class="container">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">Action</a>
+                    <a href="#" class="dropdown-item">Another action</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropleft menu -->
+    <div class="btn-group dropleft">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropleft</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Action</a>
+            <a href="#" class="dropdown-item">Another action</a>
+        </div>
+    </div>
+
+    <!-- Dropright menu -->
+    <div class="btn-group dropright">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Dropright</button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Action</a>
+            <a href="#" class="dropdown-item">Another action</a>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="container">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Normal Action</a>
+                <a class="dropdown-item active" href="#">Active Action</a>
+                <a class="dropdown-item disabled" href="#">Disabled Action</a>
+            </div>
+        </div>
+    </div>
+
+
+    <br><br>
+    <div class="container">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                Dropdown button
+            </button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action 1</a>
+                <a class="dropdown-item" href="#">Action 2</a>
+                <a class="dropdown-item" href="#">Action 3</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated action</a>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br>
+
+    <div class="container">
+        <div class="btn-group">
+            <button type="button" class="btn btn-primary">Only Button 1</button>
+            <button type="button" class="btn btn-primary">Only Button 2</button>
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                    Dropdown button
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <div class="container">   
+        <div class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item">Action</a>
+                <a href="#" class="dropdown-item">Another action</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

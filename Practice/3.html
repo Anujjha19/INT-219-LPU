@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form  >
+    <label for=""> Enter Name:</label>
+    <input type="text" name="" id="Fname" placeholder="Your Name" >
+    <br>
+    <br>
+    <label for=""> Enter Number:</label>
+    <input type="tel" name="" id="Ntel" placeholder="Your tel">
+    <br>
+    <br>
+    <label for=""> Enter Email:</label>
+    <input type="email" name="" id="email" placeholder="Your Email">
+    <br>
+    <br>
+    <label for=""> Enter Password:</label>
+    <input type="password" name="" id="password" placeholder="Your password">
+    <input type="submit" value="register" onclick="return validate()" >
+
+
+    <!-- <a href="5.html"> <input type="button" value="Submit"></a> -->
+    
+
+
+</form>
+    <script>
+        let button =document.getElementById("button")
+
+        let name= document.getElementById("Fname");
+        let number= document.getElementById("Ntel");
+        let email= document.getElementById("email");
+        let password= document.getElementById("password");
+
+        
+
+        function validate(){
+
+            var name1= name.value;
+            
+            if(name1.length ==0){
+                alert("Name is required");
+            }
+            var tel2=Number( number.value);
+            if(tel2.length ==0){
+                alert("Phone NO is required");
+            }
+        }
+
+        
+         
+    </script>
+
+</body>
+
+</html>
